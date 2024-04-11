@@ -1,0 +1,24 @@
+{
+  "name": "lingspider",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Winslow S.E.M.",
+  "license": "MIT",
+  "dependencies": {
+    "an-array-of-french-words": "^2.0.0",
+    "an-array-of-spanish-words": "^2.0.0",
+    "csv-parser": "^3.0.0",
+    "dotenv": "^16.4.5",
+    "htmlparser2": "^9.1.0",
+    "selenium-webdriver": "^4.19.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.7.1",
+    "twitter-api-v2": "^1.16.1",
+    "word2vec": "^1.1.5"
+  }
+}

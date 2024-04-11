@@ -1,0 +1,3 @@
+[submodule "covid19_twitter"]
+	path = covid19_twitter
+	url = https://github.com/thepanacealab/covid19_twitter
