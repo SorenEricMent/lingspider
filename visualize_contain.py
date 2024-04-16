@@ -9,7 +9,7 @@ def read_json_data(filename):
         data = json.load(file)
     return data
 
-def visualize_word_occurrences(substrings, data):
+def visualize_word_occurrences(substrings, data, substrings_input):
     # Initialize a dictionary to hold the sum of occurrences for each date
     total_occurrences = defaultdict(int)
     all_matched_words = set()
@@ -51,6 +51,7 @@ def visualize_word_occurrences(substrings, data):
     plt.figtext(0.5, 0.01, f"Matched words: {wrapped_text}", ha='center', va='bottom', fontsize=9, wrap=True)
 
     plt.tight_layout(rect=[0, 0.05, 1, 0.95])  # Adjust the layout to make room for the text
+    plt.savefig(substrings_input + '_c.png')
     plt.show()
 
 if __name__ == '__main__':
@@ -59,5 +60,5 @@ if __name__ == '__main__':
 
     substrings_input = input("Enter the substrings to visualize, separated by commas: ")
     substrings = [substring.strip() for substring in substrings_input.split(',')]
-    visualize_word_occurrences(substrings, data)
+    visualize_word_occurrences(substrings, data, substrings_input)
 

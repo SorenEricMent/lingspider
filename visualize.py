@@ -8,7 +8,7 @@ def read_json_data(filename):
         data = json.load(file)
     return data
 
-def visualize_word_occurrences(words, data):
+def visualize_word_occurrences(words, data, words_input):
     # Initialize a dictionary to hold the sum of occurrences for each date
     total_occurrences = defaultdict(int)
 
@@ -40,6 +40,7 @@ def visualize_word_occurrences(words, data):
     plt.grid(True)
     plt.xticks(rotation=45)
     plt.tight_layout()
+    plt.savefig(words_input + '.png')
     plt.show()
 
 if __name__ == '__main__':
@@ -48,4 +49,4 @@ if __name__ == '__main__':
 
     words_input = input("Enter the words to visualize, separated by commas: ")
     words = [word.strip() for word in words_input.split(',')]
-    visualize_word_occurrences(words, data)
+    visualize_word_occurrences(words, data, words_input)
